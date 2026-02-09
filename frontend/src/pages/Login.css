@@ -1,0 +1,89 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  color: var(--accent-green);
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.login-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.login-footer a {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+.login-hints {
+  margin-top: 30px;
+}
+
+.hint-box {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--accent-orange);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.hint-box h4 {
+  color: var(--accent-orange);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.hint-box p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.hint-code {
+  background-color: var(--bg-primary);
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--accent-green);
+  font-family: 'Courier New', monospace;
+  border-left: 3px solid var(--accent-green);
+}

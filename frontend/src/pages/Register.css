@@ -1,0 +1,94 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.register-container {
+  max-width: 550px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.register-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header h1 {
+  color: var(--accent-green);
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.register-form {
+  margin-bottom: 20px;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 5px;
+  color: var(--accent-orange);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.register-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.register-footer a {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+.register-info {
+  margin-top: 30px;
+}
+
+.info-box {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--accent-blue);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.info-box h4 {
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-left: 10px;
+}

@@ -1,0 +1,151 @@
+.challenge-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.category-section {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.category-header h3 {
+  margin-bottom: 0;
+}
+
+.category-progress {
+  color: var(--accent-orange);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-tertiary);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-orange));
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
+.challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.challenge-item {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.challenge-item:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.challenge-item.solved {
+  border-color: var(--accent-green);
+  background-color: rgba(0, 255, 65, 0.05);
+}
+
+.challenge-info {
+  flex: 1;
+}
+
+.challenge-name {
+  color: var(--text-primary);
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.challenge-difficulty {
+  color: var(--accent-orange);
+  font-size: 14px;
+}
+
+.challenge-description {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.challenge-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.status-solved,
+.status-unsolved {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.points-earned,
+.points-available {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.points-earned {
+  color: var(--accent-green);
+}
+
+.points-available {
+  color: var(--accent-orange);
+}
+
+.no-challenges {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .challenge-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .challenge-status {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
