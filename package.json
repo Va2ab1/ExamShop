@@ -1,0 +1,30 @@
+{
+  "name": "examshop",
+  "version": "1.0.0",
+  "description": "Intentionally vulnerable web application for security training (OWASP Top 10:2025)",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=backend",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "security",
+    "training",
+    "owasp",
+    "vulnerable",
+    "ctf"
+  ],
+  "author": "ExamShop Team",
+  "license": "MIT"
+}
