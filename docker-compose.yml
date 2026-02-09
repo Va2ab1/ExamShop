@@ -1,0 +1,18 @@
+services:
+  examshop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: examshop
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=super-secret-key-examshop-2025
+      - PORT=3000
+    volumes:
+      - examshop-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  examshop-data:

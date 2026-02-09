@@ -1,0 +1,162 @@
+.scoreboard {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.scoreboard-empty {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.scoreboard-table {
+  width: 100%;
+}
+
+.scoreboard-header {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px 120px;
+  gap: 15px;
+  padding: 15px 20px;
+  background-color: var(--bg-tertiary);
+  border-bottom: 2px solid var(--accent-green);
+  font-weight: bold;
+  color: var(--accent-green);
+}
+
+.scoreboard-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px 120px;
+  gap: 15px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scoreboard-row:hover {
+  background-color: var(--bg-tertiary);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.scoreboard-row.rank-1 {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
+  border-left: 4px solid gold;
+}
+
+.scoreboard-row.rank-2 {
+  background: linear-gradient(90deg, rgba(192, 192, 192, 0.1), transparent);
+  border-left: 4px solid silver;
+}
+
+.scoreboard-row.rank-3 {
+  background: linear-gradient(90deg, rgba(205, 127, 50, 0.1), transparent);
+  border-left: 4px solid #cd7f32;
+}
+
+.rank-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.rank-number {
+  color: var(--accent-orange);
+  font-size: 1.2rem;
+}
+
+.rank-medal {
+  font-size: 1.5rem;
+}
+
+.user-col {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.score-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.score-number {
+  color: var(--accent-green);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.score-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.solved-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.solved-number {
+  color: var(--accent-orange);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.solved-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .scoreboard-header,
+  .scoreboard-row {
+    grid-template-columns: 80px 1fr 100px;
+    gap: 10px;
+    padding: 12px 15px;
+  }
+  
+  .solved-col {
+    display: none;
+  }
+  
+  .rank-number {
+    font-size: 1rem;
+  }
+  
+  .rank-medal {
+    font-size: 1.2rem;
+  }
+  
+  .username {
+    font-size: 1rem;
+  }
+  
+  .score-number {
+    font-size: 1.2rem;
+  }
+}
