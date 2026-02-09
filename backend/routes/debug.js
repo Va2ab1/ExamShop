@@ -1,4 +1,5 @@
 import express from 'express';
+import os from 'os';
 import config from '../config/config.js';
 import { getDatabase } from '../config/database.js';
 
@@ -88,8 +89,6 @@ router.get('/env', (req, res) => {
 
 // System info
 router.get('/system', (req, res) => {
-  const os = require('os');
-  
   res.json({
     hostname: os.hostname(),
     type: os.type(),

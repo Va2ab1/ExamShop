@@ -1,6 +1,7 @@
 import express from 'express';
 import { getDatabase } from '../config/database.js';
 import { authenticateToken } from '../middleware/auth.js';
+import { hashPassword } from '../utils/crypto.js';
 
 const router = express.Router();
 
@@ -79,9 +80,8 @@ router.put('/:id', authenticateToken, (req, res) => {
       params.push(role);
     }
     if (password) {
-      const crypto = require('../utils/crypto.js');
       updates.push('password = ?');
-      params.push(crypto.hashPassword(password));
+      params.push(hashPassword(password));
     }
 
     if (updates.length === 0) {

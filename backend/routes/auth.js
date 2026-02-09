@@ -1,5 +1,7 @@
 import express from 'express';
+import jwt from 'jsonwebtoken';
 import { getDatabase } from '../config/database.js';
+import config from '../config/config.js';
 import { hashPassword, verifyPassword, generateToken, generateResetToken } from '../utils/crypto.js';
 import { validateEmail, validateUsername, validatePassword } from '../utils/validator.js';
 
@@ -245,8 +247,6 @@ router.get('/me', (req, res) => {
   }
 
   try {
-    const jwt = require('jsonwebtoken');
-    const config = require('../config/config.js').default;
     const decoded = jwt.verify(token, config.jwtSecret);
 
     const db = getDatabase();

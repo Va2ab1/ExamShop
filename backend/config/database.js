@@ -448,27 +448,28 @@ function seedData() {
   });
 
   // Seed coupons for Challenge #23
+  const DAYS_TO_MS = 24 * 60 * 60 * 1000;
   const coupons = [
     {
       code: 'WELCOME50',
       discount_percent: 50,
       max_uses: 1,
       current_uses: 0,
-      expires_at: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
+      expires_at: new Date(Date.now() + 30 * DAYS_TO_MS).toISOString()
     },
     {
       code: 'STUDENT25',
       discount_percent: 25,
       max_uses: 5,
       current_uses: 0,
-      expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString()
+      expires_at: new Date(Date.now() + 60 * DAYS_TO_MS).toISOString()
     },
     {
       code: 'FREESHIP',
       discount_percent: 10,
       max_uses: 100,
       current_uses: 0,
-      expires_at: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString()
+      expires_at: new Date(Date.now() + 90 * DAYS_TO_MS).toISOString()
     }
   ];
 

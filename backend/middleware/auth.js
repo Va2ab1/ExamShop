@@ -38,7 +38,7 @@ export function authenticateToken(req, res, next) {
         const header = JSON.parse(Buffer.from(parts[0], 'base64').toString());
         
         // Challenge #28: Allow "none" algorithm
-        if (header.alg === 'none' || header.alg === 'None' || header.alg === 'NONE') {
+        if (header.alg && header.alg.toLowerCase() === 'none') {
           // Just decode without verification
           decoded = JSON.parse(Buffer.from(parts[1], 'base64').toString());
         } else {

@@ -290,8 +290,6 @@ router.get('/config', authenticateToken, (req, res) => {
       });
     }
 
-    const config = require('../config/config.js').default;
-
     res.json({
       message: 'System configuration',
       config: {
